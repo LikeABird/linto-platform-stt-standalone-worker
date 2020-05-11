@@ -117,7 +117,7 @@ def transcribe():
     global busy
     busy=1
     fileid = str(uuid.uuid4())
-    metadata = True if request.args.get('metadata').lower() == 'json' else False
+    metadata = False
     
     if 'file' in request.files.keys():
         file = request.files['file']
