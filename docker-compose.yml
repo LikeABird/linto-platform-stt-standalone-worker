@@ -14,14 +14,3 @@ services:
     env_file: .env
     environment:
       - ${SERVICE_PORT}
-
-  swaggerui:
-    image: swaggerapi/swagger-ui
-    ports:
-      - 6666:8080
-    hostname: swaggerui
-    volumes:
-      - ${SWAGGER_PATH}:/app/swagger/
-    env_file: .env
-    environment:
-      - SWAGGER_JSON
